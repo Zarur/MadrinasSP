@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quiénes somos</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Lato" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <meta charset="utf-8">
+    <script>
+        var isMenuOpen = false;
+        $( document ).ready(function() {
+
+      // Function to change the nav-bar on scroll
+      $(window).scroll(function(){
+          ($(window).scrollTop() >= 100) ? (
+              $('.fixed-nav-bar').addClass('scrolled'),
+              $('.the-bass').addClass('scrolled')
+          ) : (
+              $('.fixed-nav-bar').removeClass('scrolled'),
+              $('.the-bass').removeClass('scrolled')
+          );
+      });
+
+      // Drop Down Function
+      $('#menuButton').on('change', function(){
+          ($('#menuButton').is(':checked')) ? (
+              $('.the-bass').addClass('dropped')
+          ) : (
+              $('.the-bass').removeClass('dropped')
+          );
+      });
+
+      $(document).on( 'mouseenter', '.menu-button-label', function(e){
+         if( $('#menuButton').not(':checked') )
+            $('.the-bass').addClass('dropped');
+      });
+
+      $(document).on( 'mouseleave', '.dropped', function(e){
+          $('.the-bass').removeClass('dropped');
+      });
+
+    });
+</script>
+<script>
+    $(document).ready(function(){
+
+  $(".Modern-Slider").slick({
+    autoplay:true,
+    autoplaySpeed:10000,
+    speed:600,
+    slidesToShow:1,
+    slidesToScroll:1,
+    pauseOnHover:false,
+    dots:true,
+    pauseOnDotsHover:true,
+    cssEase:'linear',
+   // fade:true,
+    draggable:false,
+    prevArrow:'<button class="PrevArrow"></button>',
+    nextArrow:'<button class="NextArrow"></button>',
+  });
+
+})
+    </script>
+    <script>
+        $(document).ready(function() {
+            (function($) {
+                $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
+                $('.tab ul.tabs li a').click(function(g) {
+                    var tab = $(this).closest('.tab'),
+                        index = $(this).closest('li').index();
+                    tab.find('ul.tabs > li').removeClass('current');
+                    $(this).closest('li').addClass('current');
+                    tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
+                    tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
+                    g.preventDefault();
+                });
+            })(jQuery);
+        });
+    </script>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+* {
+transition: 0.4s ease;
+}
+body {
+background-color: #e5e9e9;
+/*font-size: 22px;
+line-height: 28px;
+letter-spacing: 4px;
+font-family: "Raleway";
+font-weight: 400;*/
+}
+
+
+#body_imposture_font
+{
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 4px;
+  font-family: "Raleway";
+  font-weight: 400;
+}
+*{
+box-sizing:border-box;
+}
+
+.fixed-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+min-height: 100px;
+padding: 0 25px;
+box-sizing: border-box;
+background-color:/*rgba(13, 197, 13, 0.959)*/rgb(230, 235, 236);
+box-shadow: 0 0 15px 2px rgba(0,0,0,0.5);
+z-index: 100;
+-webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+transition: 0.35s ease;
+}
+.fixed-nav-bar .logo {
+position: absolute;
+left: 40px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+text-transform: uppercase;
+color: /*#ccc*/navy;
+font-size: 28px;
+font-weight: 300;
+cursor: pointer;
+}
+.fixed-nav-bar .logo span {
+color: /*#e78533*/black;
+font-weight: 600;
+}
+.fixed-nav-bar.scrolled {
+min-height: 60px;
+background-color:/*#17c217*/ cmyk(9%, 3%, 5%, 0);
+box-shadow: 0 0 30px 3px rgba(0,0,0,0.6);
+}
+.fixed-nav-bar.scrolled .logo {
+color: #000;
+}
+.fixed-nav-bar.scrolled .menu-button-label .white-bar {
+background-color: #000;
+}
+.drop-down-container {
+height: 15%;
+width: 90%;
+left: 160%;
+margin-top: 5px;
+-webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+transition: 0.3s ease;
+overflow: none;
+}
+.drop-down-submenu{
+max-height: 0;
+display: none;
+}
+
+.transition-top{
+top: 100%;
+}
+
+.transition-bottom{
+bottom: 100%;
+}
+.drop-down-item:hover > .drop-down-submenu{
+position: absolute;
+overflow: hidden;
+background: red;
+display: block;
+width: 100%;
+z-Index: 99999;
+max-height: 1000px;
+animation: HEIGHT 1s;
+}
+
+@keyframes HEIGHT{
+from{
+  max-height: 0;
+}
+
+to{
+  max-height: 1000px;
+}
+}
+.drop-down-item {
+position: absolute;
+top: 0;
+left: 0;
+right: 8px;
+bottom: 0;
+background-color: #222;
+color:white;
+z-index: 100;
+text-align:center;
+}
+
+.drop-down-item:before {
+content: "";
+position: absolute;
+right: -8px;
+height: 100%;
+width: 8px;
+transition: 0.25s ease;
+background: linear-gradient(to left, #e78533 50%, #222 50%);
+background-size: 200% 100%;
+background-position: left;
+}
+.drop-down-item:hover::before {
+background-position: right;
+}
+.the-bass {
+position: fixed;
+height: 0px;
+width: 360px;
+right: 0;
+top: 100px;
+background-color: rgba(0,0,0,0.7);
+transition: 0.35s ease, height 0.35s 0.3s ease;
+z-index: 90;
+}
+.the-bass.scrolled {
+top: 60px;
+}
+.the-bass.dropped {
+height: 60vh;
+padding: 5px 0;
+transition: 0.35s ease;
+}
+.the-bass.dropped .drop-down-container {
+left: 50%;
+}
+.the-bass.dropped .drop-down-container:nth-child(1) {
+transition: 0.3s ease, left 0.4s 0.4s ease;
+}
+.the-bass.dropped .drop-down-container:nth-child(2) {
+transition: 0.3s ease, left 0.4s 0.46s ease;
+}
+.the-bass.dropped .drop-down-container:nth-child(3) {
+transition: 0.3s ease, left 0.4s 0.52s ease;
+}
+.the-bass.dropped .drop-down-container:nth-child(4) {
+transition: 0.3s ease, left 0.4s 0.58s ease;
+}
+.the-bass.dropped .drop-down-container:nth-child(5) {
+transition: 0.3s ease, left 0.4s 0.64s ease;
+}
+.the-bass.dropped .drop-down-container:nth-child(6) {
+transition: 0.3s ease, left 0.4s 0.7s ease;
+}
+.menu-button-label {
+position: absolute;
+height: 48px;
+width: 48px;
+top: 50%;
+right: 25px;
+-webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+transition: 0.4s ease;
+}
+.menu-button-label .white-bar {
+position: absolute;
+height: 2px;
+width: 66%;
+background-color: #ccc;
+left: 50%;
+-webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+transition: 0.4s ease, width 0.3s ease;
+}
+.menu-button-label .white-bar:nth-child(1) {
+top: 24%;
+}
+.menu-button-label .white-bar:nth-child(2),
+.menu-button-label .white-bar:nth-child(3) {
+top: 47%;
+}
+.menu-button-label .white-bar:nth-child(4) {
+top: 71%;
+}
+#menuButton {
+display: none;
+}
+#menuButton:checked+ .menu-button-label .white-bar:nth-child(1),
+#menuButton:checked+ .menu-button-label .white-bar:nth-child(4) {
+width: 0%;
+}
+#menuButton:checked+ .menu-button-label .white-bar:nth-child(2) {
+-webkit-transform: translateX(-50%) rotate(45deg);
+        transform: translateX(-50%) rotate(45deg);
+}
+#menuButton:checked+ .menu-button-label .white-bar:nth-child(3) {
+-webkit-transform: translateX(-50%) rotate(-45deg);
+        transform: translateX(-50%) rotate(-45deg);
+}
+
+@media only screen and (min-width: 768px) {
+
+  #menuButton:hover+ .menu-button-label .white-bar:nth-child(1),
+  #menuButton:hover+ .menu-button-label .white-bar:nth-child(4) {
+  width: 0%;
+  }
+  #menuButton:hover+ .menu-button-label .white-bar:nth-child(2) {
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  }
+  #menuButton:hover+ .menu-button-label .white-bar:nth-child(3) {
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+.rela-block {
+display: block;
+position: relative;
+overflow: hidden;
+}
+
+.relative-block {
+display: block;
+position: relative;
+}
+
+.rela-no-overflow{
+display: block;
+position: relative;
+}
+.cover-before::before {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+/*          background        */
+
+
+/* ==== Main CSS === */
+.img-fill{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.img-fill img {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  display: inline-block;
+  max-width: none;
+
+}
+#pj
+{
+  width:10vw;
+  height:20vh;
+}
+* {
+    box-sizing: border-box;
+  }
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+        .tab {
+            padding-top: 100px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+            width: 80%;
+            margin: 0 auto;
+            font-family: Poppins, sans-serif;
+            line-height: 1.5;
+            font-weight: 300;
+            color: #888;
+            -webkit-font-smoothing: antialiased;
+        }
+        .tabs {
+            display: table;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid blue;
+            border-radius: 10px;
+            margin-left: 5%;
+            width: 85%;
+        }
+        .tabs li {
+            display: block;
+            line-height: 38px;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            float: left;
+        }
+        @media only screen and (max-width: 600px) {
+            .tabs li {
+                display: block;
+                line-height: 38px;
+                overflow: hidden;
+                padding: 0;
+                position: relative;
+                width: 90%;
+            }
+        }
+        .tabs a {
+            background-color: #eff0f2;
+            border-bottom: 1px solid #fff;
+            color: #888;
+            font-weight: 500;
+            display: block;
+            letter-spacing: 0;
+            outline: none;
+            text-decoration: none;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+        .tabs_item {
+            display: none;
+            padding: 30px 0;
+
+        }
+        .tabs_item{
+
+        }
+        h4
+        {
+          font-weight: bold;
+          /*color: lightpink;*/
+          font-size: 20px;
+        }
+        .tabs_item img {
+            width: 30%;
+            float: left;
+            margin-right: 30px;
+            margin-left: 30px;
+            height: 30%;
+        }
+        img {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2%;
+        }
+        .tabs_item:first-child {
+            display: block;
+        }
+        .current a {
+            color: #fff;
+            background: blue;
+        }
+
+
+
+
+        .tabss {
+            text-align: center;
+        }
+        .Titulo
+        {
+          margin-bottom: 20px;
+        }
+        .zone_list
+        {
+          display: inline-block;
+        }
+        #top_list
+        {
+          white-space: nowrap;
+        }
+        .bottom_objective
+        {
+          margin-top: 70px;
+        }
+
+
+
+        h1{
+                     font-size:25px;
+                     text-align: left;
+                     text-transform:capitalize;
+                 }
+                .service-box{
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom:10px;
+                    perspective:1000px;
+                    -webkit-perspective:1000px;
+                }
+                .service-icon{
+                    width: 100%;
+                    height: 220px;
+                    padding: 20px;
+                    text-align: center;
+                    transition: all .5s ease;
+                }
+
+                .service-content{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    opacity: 0;
+                    width: 100%;
+                    height: 220px;
+                    padding: 20px;
+                    text-align: center;
+                    transition: all .5s ease;
+                    background-color: #474747;
+                    backface-visibility:hidden;
+                    transform-style: preserve-3d;
+                    -webkit-transform: translateY(110px) rotateX(-90deg);
+                    -moz-transform: translateY(110px) rotateX(-90deg);
+                    -ms-transform: translateY(110px) rotateX(-90deg);
+                    -o-transform: translateY(110px) rotateX(-90deg);
+                    transform: translateY(110px) rotateX(-90deg);
+                }
+                .service-box .service-icon .front-content{
+                    position: relative;
+                    top:80px;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+
+                .service-box .service-icon .front-content i {
+                    font-size: 28px;
+                    color: #fff;
+                    font-weight: normal;
+                }
+
+                .service-box .service-icon .front-content h3 {
+                    font-size: 15px;
+                    color: #fff;
+                    text-align: center;
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
+                .service-box .service-content h3 {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom:10px;
+                    text-transform: uppercase;
+                }
+                .service-box .service-content p {
+                    font-size: 13px;
+                    color: #b1b1b1;
+                    margin:0;
+                }
+                .yellow{background-color: #ffc000;}
+                .blue{background-color: #00bfff;}
+                .pink{background-color: #ff00bf;}
+                .orange{background-color: #fc7f0c;}
+                .red{background-color: #e84b3a;}
+                .grey{background-color: #474747;}
+                .service-box:hover .service-icon{
+                    opacity: 0;
+                    -webkit-transform: translateY(-110px) rotateX(90deg);
+                    -moz-transform: translateY(-110px) rotateX(90deg);
+                    -ms-transform: translateY(-110px) rotateX(90deg);
+                    -o-transform: translateY(-110px) rotateX(90deg);
+                    transform: translateY(-110px) rotateX(90deg);
+                }
+                .service-box:hover .service-content {
+                    opacity: 1;
+                    -webkit-transform: rotateX(0);
+                    -moz-transform: rotateX(0);
+                    -ms-transform: rotateX(0);
+                    -o-transform: rotateX(0);
+                    transform: rotateX(0);
+                }
+
+
+
+
+----------------
+
+
+
+
+
+
+.h11{
+             font-size:25px;
+             text-align: left;
+             text-transform:capitalize;
+         }
+        .service-box{
+            position: relative;
+            overflow: hidden;
+            margin-bottom:10px;
+            perspective:1000px;
+            -webkit-perspective:1000px;
+        }
+        .service-icon{
+            width: 100%;
+            height: 220px;
+            padding: 20px;
+            text-align: center;
+            transition: all .5s ease;
+        }
+
+        .service-content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            width: 100%;
+            height: 220px;
+            padding: 20px;
+            text-align: center;
+            transition: all .5s ease;
+            background-color: #474747;
+            backface-visibility:hidden;
+            transform-style: preserve-3d;
+            -webkit-transform: translateY(110px) rotateX(-90deg);
+            -moz-transform: translateY(110px) rotateX(-90deg);
+            -ms-transform: translateY(110px) rotateX(-90deg);
+            -o-transform: translateY(110px) rotateX(-90deg);
+            transform: translateY(110px) rotateX(-90deg);
+        }
+        .service-box .service-icon .front-content{
+            position: relative;
+            top:80px;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .service-box .service-icon .front-content i {
+            font-size: 28px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .service-box .service-icon .front-content h3 {
+            font-size: 15px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .service-box .service-content h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom:10px;
+            text-transform: uppercase;
+        }
+        .service-box .service-content p {
+            font-size: 13px;
+            color: #b1b1b1;
+            margin:0;
+        }
+        .yellow{background-color: #ffc000;}
+        .blue{background-color: #00bfff;}
+        .orange{background-color: #fc7f0c;}
+        .red{background-color: #e84b3a;}
+        .grey{background-color: #474747;}
+        .service-box:hover .service-icon{
+            opacity: 0;
+            -webkit-transform: translateY(-110px) rotateX(90deg);
+            -moz-transform: translateY(-110px) rotateX(90deg);
+            -ms-transform: translateY(-110px) rotateX(90deg);
+            -o-transform: translateY(-110px) rotateX(90deg);
+            transform: translateY(-110px) rotateX(90deg);
+        }
+        .service-box:hover .service-content {
+            opacity: 1;
+            -webkit-transform: rotateX(0);
+            -moz-transform: rotateX(0);
+            -ms-transform: rotateX(0);
+            -o-transform: rotateX(0);
+            transform: rotateX(0);
+        }
+
+
+#QuienesSomos
+{
+margin-top: 4%;
+}
+
+.col-sm-4
+{
+  padding: 3px;
+}
+
+.row2
+{
+align-items: center;
+justify-content: center;
+}
+
+.firsttab
+{
+  padding: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+        <section id="body_imposture_font">
+
+          <div class="fixed-nav-bar">
+                  <div class="logo"><img src="pj.png" id="pj"><!--<span>PADRINOS JOVENES</span>--></div>
+                  <input type="checkbox" id="menuButton" />
+                  <label for="menuButton" class="menu-button-label">
+                      <div class="white-bar"></div>
+                      <div class="white-bar"></div>
+                      <div class="white-bar"></div>
+                      <div class="white-bar"></div>
+                  </label>
+                </div>
+                <div class="the-bass">
+                  <div class="rela-block drop-down-container">
+                      <div class="drop-down-item">
+                        <a href="quienes.html" target="_blank"><p id="p_">¿Quiénes somos?</p></a>
+                      </div>
+                  </div>
+                  <div class="rela-block drop-down-container">
+                      <div class="drop-down-item">
+                      <a href="#"><p id="p_">Ejes de acción</p></a>
+                    </div>
+                  </div>
+                  <div class="rela-block drop-down-container">
+                      <div class="drop-down-item">
+                      <a href="casosdexito.html" target="_blank"><p id="p_">Casos de éxito</p></a>
+                    </div>
+                  </div>
+                  <div class="rela-block drop-down-container">
+                      <div class="drop-down-item">
+                      <a href="#"><p id="p_">Eventos</p></a>
+                    </div>
+                  </div>
+                  <div class="rela-block drop-down-container">
+                      <div class="drop-down-item">
+                      <a href="#"><p id="p_">Unete</p></a>
+                    </div>
+                  </div>
+                  <div class="rela-block drop-down-container">
+                      <div class="drop-down-item">
+                        <a href="#"><p id="p_">Cóntactanos</p></a>
+                      </div>
+                  </div>
+                </div>
+
+        </section>
+
+    <div class="tab container">
+      <h1 class="Titulo" id="QuienesSomos">¿Quiénes somos?</h1>
+
+        <ul class="tabs row tabss firsttab" id="top_list">
+            <li class="col-sm-4"><a href="#">Nuestro origen</a></li>
+            <li class="col-sm-4"><a href="#">Zonas de intervención</a></li>
+            <li class="col-sm-4"><a href="#">Objetivos</a></li>
+
+        </ul>
+        <!-- / tabs -->
+
+
+
+        <div>
+            <div class="tab_content">
+
+                <div class="tabs_item">
+                    <img src="http://revistasietedias.com/wp-content/uploads/2017/03/DSC_8404.jpg">
+                    <h4>Nuestro Origen</h4>
+                    <p>Madrinas de San Pedro y Padrinos Jóvenes de San Pedro, son el primer programa
+                      personalizado para atender las necesidades prioritarias de las personas en situación
+                      de vulnerabilidad dentro del Municipio de San Pedro.</p>
+
+                      <p>El Consejo Ciudadano de Madrinas de San Pedro fue instituido el 5 de noviembre del
+                        2015 y está conformado por 43 voluntarios y los Padrinos Jóvenes tomaron protesta el
+                        5 de abril del 2017 conformado por 33 voluntarios reforzando el labor de las Madrinas,
+                        apoyando en las actividades de recaudación para los Casos Especiales.
+                      </p>
+
+                </div>
+                <!-- / tabs_item -->
+
+
+                <div class="tabs_item">
+                    <img src="map_zone.png">
+                    <h4>Colonias Beneficiadas</h4>
+
+                    <ol class="zone_list">
+                      <li>Barrancas del Pedregal </li>
+                      <li>Canteras</li>
+                      <li>Centro de San Pedro</li>
+                      <li>El Obispo</li>
+                      <li>Jesús M. Garza</li>
+                      <li>Lázaro Garza Ayala</li>
+                      <li>Los Pinos 1er sector</li>
+                      <li>Los Pinos 2do sector</li>
+                      <li>Lucio Blanco 1er sector</li>
+                    </ol>
+
+                    <ol class="zone_list">
+                      <li>Lucio Blanco 2º sector</li>
+                      <li>Lucio Blanco 3er sector</li>
+                      <li>Luis Echeverría</li>
+                      <li>Plan de Ayala</li>
+                      <li>Revolución</li>
+                      <li>San Francisco</li>
+                      <li>San Pedro 400</li>
+                      <li>Santa Elena</li>
+                      <li>Villas del Obispo</li>
+                    </ol>
+
+
+                </div>
+                <!-- / tabs_item -->
+
+                <div class="tabs_item">
+                    <div class="container">
+                    <h4>Nuestros objetivos son:</h4>
+                    <p>Los voluntarios que integran el Consejo Ciudadano de Madrinas de San
+                      Pedro y los Padrinos Jóvenes tienen como objetivo ser enlace directo
+                      entre los vecinos y el Alcalde a fin de:
+                    </p>
+
+
+
+
+                    <div class="container">
+                        <h1 class="h11"></h1>
+                        <div class="row row2">
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="service-box">
+                                    <div class="service-icon yellow">
+                                        <div class="front-content">
+                                            <i class="fa fa-road"></i>
+                                            <h3>Canalizar</h3>
+                                        </div>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3>Canalizar</h3>
+                                        <p>Canalizar reportes e inquietudes ciudadanas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="service-box">
+                                    <div class="service-icon pink">
+                                        <div class="front-content">
+                                            <i class="fa fa-pencil-square-o"></i>
+                                            <h3>Gestionar</h3>
+                                        </div>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3>Gestionar</h3>
+                                        <p>Gestionar, monitorear y dar seguimiento a las solicitudes ciudadanas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="service-box">
+                                    <div class="service-icon orange">
+                                        <div class="front-content">
+                                            <i class="fa fa-envelope-o"></i>
+                                            <h3>Reportar</h3>
+                                        </div>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3>Reportar</h3>
+                                        <p>Reportar directamente al Alcalde las inquietudes ciudadanas y el avance
+correspondiente en la resolución de las mismas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="service-box">
+                                    <div class="service-icon red">
+                                        <div class="front-content">
+                                            <i class="fa fa-users"></i>
+                                            <h3>Reuniones</h3>
+                                        </div>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3>Reuniones</h3>
+                                        <p>Realizar reuniones periódicas con vecinos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="service-box">
+                                    <div class="service-icon blue">
+                                        <div class="front-content">
+                                            <i class="fa fa-sort-alpha-desc"></i>
+                                            <h3>Priorizar</h3>
+                                        </div>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3>Priorizar</h3>
+                                        <p>Dar prioridad a temas con mayor contraste social.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                  </div>
+
+
+
+</body>
+</html>
